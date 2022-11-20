@@ -15,11 +15,21 @@
             Group = group;
             Point = point;
             graduated = IsGraduated;
+
+            if (IsGraduated)
+            {
+                Console.WriteLine(name + surname + "üniversitet məzunudur!");
+            }
+            else
+            {
+                Console.WriteLine(name + surname + "üniversitet məzunu deyil!");
+            }
         }
 
-        public void Exam(int n)
+        public void Exam(int n, string point)
         {
-            if (n >= 80)
+            Point = point;
+            if (point>= 80 && point<=100)
             {
                 Console.Write("İmtahana girişə icazə verilsin");
             }
